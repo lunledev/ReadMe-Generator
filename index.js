@@ -68,13 +68,13 @@ const questions = [
 
 
 ];
-    const temp = inquirer.createPromptModule();
+//    const temp = inquirer.createPromptModule();
 //const temp = inquirer.prompt(questions).then((answer) =>{}
-    temp(questions).then((answers) =>{
+ //   temp(questions).then((answers) =>{
    
-    const filename =`${answers.title.toLowerCase().split(' ').join('')}.md`;
-    writeToFile(filename, answers);
-});
+  //  const filename =`${answers.title.toLowerCase().split(' ').join('')}.md`;
+//    writeToFile(filename, answers);
+//});
 
 
 
@@ -100,7 +100,13 @@ function init() {
     
 console.log('Welcome to Professional README Generator');
 
-
+const temp = inquirer.createPromptModule();
+//const temp = inquirer.prompt(questions).then((answer) =>{}
+    temp(questions).then((answers) =>{
+   
+    const filename =`${answers.title.toLowerCase().split(' ').join('')}.md`;
+    writeToFile(filename, answers);
+});
 
 
 }
