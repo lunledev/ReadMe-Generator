@@ -28,8 +28,26 @@ const markdownDisplay = title +'\n\n'+ descriptionTitle+'\n\n'+Description;
    
     return markdownDisplay;
     */ 
+    
 
-    const markdownDisplay = `# ${data.title}\n\n## Description\n\n${data.Description}`;
+    const markdownDisplay = 
+    `# ${data.title}\n\n## Description\n\n${data.Description}
+    \n\n## Table of Contents\n\n
+    - [Description](#Description)
+    - [Installation](#Installation)
+    - [Usage](#Usage)
+    - [Contributing](#Contributing)
+    - [License](#License)
+    - [Tests](#Tests)
+    - [Questions](#Questions)
+    \n\n## Installation\n\n${data.Installation}\n\n## Usage\n\n${data.Usage}
+    \n\n## Contributing\n\n${data.Contributing}\n\n## License\n\n${data.License}
+    \n\n## Tests\n\n${data.Tests}\n\n## Questions\n\n[My GitHub Profile](https://github.com/${data.gitHubUserName})
+    \nreach me with additional questions: ${data.email}
+    
+    
+    
+    `;
     if(data!==null)
       return `${markdownDisplay}\n\n`;
     else
