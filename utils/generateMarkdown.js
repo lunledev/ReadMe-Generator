@@ -16,6 +16,17 @@ return `\n\n## License\n\n${license}`;
 
 }
 
+function renderlicenseTableOfContents(license) {
+  if (license===undefined||license===null||license==='none'){
+  return ' ';
+  }
+    
+  else
+  return `\n\n- [License](#License)`;
+
+}
+
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
@@ -57,14 +68,13 @@ const markdownDisplay = title +'\n\n'+ descriptionTitle+'\n\n'+Description;
     */
     const markdownDisplay = 
     `# ${data.title}\n\n## Description\n\n${data.Description}
-    \n\n## Table of Contents\n\n
-    - [Description](#Description)
-    - [Installation](#Installation)
-    - [Usage](#Usage)
-    - [Contributing](#Contributing)
-    - [License](#License)
-    - [Tests](#Tests)
-    - [Questions](#Questions)
+    \n\n## Table of Contents\n
+    \n- [Description](#Description)
+    \n- [Installation](#Installation)
+    \n- [Usage](#Usage)
+    \n- [Contributing](#Contributing)${renderlicenseTableOfContents(data.License)}
+    \n- [Tests](#Tests)
+    \n- [Questions](#Questions)
     \n\n## Installation\n\n${data.Installation}\n\n## Usage\n\n${data.Usage}
     \n\n## Contributing\n\n${data.Contributing}${renderLicenseSection(data.License)}
     \n\n## Tests\n\n${data.Tests}\n\n## Questions\n\n[My GitHub Profile](https://github.com/${data.gitHubUserName})
