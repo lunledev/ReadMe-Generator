@@ -22,7 +22,7 @@ function renderlicenseTableOfContents(license) {
   }
     
   else
-  return `\n\n- [License](#License)`;
+  return `\n\n[License](#license)`;
 
 }
 
@@ -69,12 +69,12 @@ const markdownDisplay = title +'\n\n'+ descriptionTitle+'\n\n'+Description;
     const markdownDisplay = 
     `# ${data.title}\n\n## Description\n\n${data.Description}
     \n\n## Table of Contents\n
-    \n- [Description](#Description)
-    \n- [Installation](#Installation)
-    \n- [Usage](#Usage)
-    \n- [Contributing](#Contributing)${renderlicenseTableOfContents(data.License)}
-    \n- [Tests](#Tests)
-    \n- [Questions](#Questions)
+    \n[Description](#description)
+    \n[Installation](#installation)
+    \n[Usage](#usage)
+    \n[Contributing](#contributing)${renderlicenseTableOfContents(data.License)}
+    \n[Tests](#tests)
+    \n[Questions](#questions)
     \n\n## Installation\n\n${data.Installation}\n\n## Usage\n\n${data.Usage}
     \n\n## Contributing\n\n${data.Contributing}${renderLicenseSection(data.License)}
     \n\n## Tests\n\n${data.Tests}\n\n## Questions\n\n[My GitHub Profile](https://github.com/${data.gitHubUserName})
