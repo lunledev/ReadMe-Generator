@@ -68,18 +68,6 @@ const questions = [
 
 
 ];
-//    const temp = inquirer.createPromptModule();
-//const temp = inquirer.prompt(questions).then((answer) =>{}
- //   temp(questions).then((answers) =>{
-   
-  //  const filename =`${answers.title.toLowerCase().split(' ').join('')}.md`;
-//    writeToFile(filename, answers);
-//});
-
-
-
-
-
 
 
 
