@@ -15,36 +15,36 @@ const questions = [
 
     {
         type: 'input',
-        name: 'Description',
+        name: 'description',
         message: 'Enter a Description',
     },
 
     {
         type: 'input',
-        name: 'Installation',
+        name: 'installation_instructions',
         message: 'Enter installation instructions',
     },
 
     {
         type: 'input',
-        name: 'Usage',
+        name: 'usage_information',
         message: 'Enter usage information',
     },
 
     {
         type: 'input',
-        name: 'Contributing',
+        name: 'contribution_guidelines',
         message: 'Enter contribution guidelines',
     },
 
     {
         type: 'input',
-        name: 'Tests',
+        name: 'test_instructions',
         message: 'Enter test instructions',
     },
 
     { type: 'list', 
-        name: 'License',
+        name: 'license',
         message: 'Enter a License',
         choices: ['Apache 2.0', 'GNU GPLv3', 'MIT','MPL 2.0','BSD 3-Clause','none'],
         
@@ -52,7 +52,7 @@ const questions = [
 
     {
         type: 'input',
-        name:  'gitHubUserName',
+        name:  'github_username',
         message: 'Enter your git hub username',
 
     },
