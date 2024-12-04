@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
 
-  let badge = ``;
+  let badge = ' ';
 
   if (license === 'Apache 2.0')
     badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]${renderLicenseLink(license)}`;
@@ -26,7 +26,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
 
   //'Apache 2.0', 'GNU GPLv3', 'MIT','MPL 2.0','BSD 3-Clause','none'
-  let link = '';
+  let link = ' ';
 
   if (license === 'Apache 2.0')
     link = '(https://opensource.org/licenses/Apache-2.0)';
@@ -102,8 +102,7 @@ const markdownDisplay = title +'\n\n'+ descriptionTitle+'\n\n'+Description;
       
       `;
       */
-  const markdownDisplay =
-    `# ${data.title}\n\n## Description\n\n${data.description}
+  const markdownDisplay =`${renderLicenseBadge(data.license)}\n\n# ${data.title}\n\n## Description\n\n${data.description}
     \n\n## Table of Contents\n
     \n[Description](#description)
     \n[Installation](#installation)
@@ -120,8 +119,8 @@ const markdownDisplay = title +'\n\n'+ descriptionTitle+'\n\n'+Description;
     
     `;
 
-  if (data !== null)
-    return `${markdownDisplay}\n\n`;
+  if (data!==null && data.length > 0)
+    return `${markdownDisplay}`;
   else
     return markdownDisplay;
 
