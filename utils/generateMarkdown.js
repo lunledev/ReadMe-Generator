@@ -102,7 +102,7 @@ const markdownDisplay = title +'\n\n'+ descriptionTitle+'\n\n'+Description;
       
       `;
       */
-  const markdownDisplay =`${renderLicenseBadge(data.license)}\n\n# ${data.title}\n\n## Description\n\n${data.description}
+  const markdownDisplay = `${renderLicenseBadge(data.license)}\n\n# ${data.title}\n\n## Description\n\n${data.description}
     \n\n## Table of Contents\n
     \n[Description](#description)
     \n[Installation](#installation)
@@ -119,7 +119,7 @@ const markdownDisplay = title +'\n\n'+ descriptionTitle+'\n\n'+Description;
     
     `;
 
-  if (data!==null && data.length > 0)
+  if (data !== null && data.length > 0)
     return `${markdownDisplay}`;
   else
     return markdownDisplay;
