@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
   else if (license === 'BSD 3-Clause')
     badge = `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]${renderLicenseLink(license)}\n\n`;
   else if (license === undefined || license === null || license === 'none')
-    badge = ' ';
+    badge = '';
 
   return badge;
 
