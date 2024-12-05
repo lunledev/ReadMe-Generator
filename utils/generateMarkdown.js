@@ -66,7 +66,7 @@ function renderlicenseTableOfContents(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
-  const markdownDisplay = `${renderLicenseBadge(data.license)}git# ${data.title}\n\n## Description\n\n${data.description}
+  const markdownDisplay = `${renderLicenseBadge(data.license)}# ${data.title}\n\n## Description\n\n${data.description}
     \n\n## Table of Contents\n
     \n[Description](#description)
     \n[Installation](#installation)
