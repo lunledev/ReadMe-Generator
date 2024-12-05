@@ -5,13 +5,13 @@ function renderLicenseBadge(license) {
   let badge = ' ';
 
   if (license === 'Apache 2.0')
-    badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]${renderLicenseLink(license)}`;
+    badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]${renderLicenseLink(license)}\n\n`;
   else if (license === 'MIT')
-    badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]${renderLicenseLink(license)}`;
+    badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]${renderLicenseLink(license)}\n\n`;
   else if (license === 'MPL 2.0')
-    badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]${renderLicenseLink(license)}`;
+    badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]${renderLicenseLink(license)}\n\n`;
   else if (license === 'BSD 3-Clause')
-    badge = `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]${renderLicenseLink(license)}`;
+    badge = `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]${renderLicenseLink(license)}\n\n`;
   else if (license === undefined || license === null || license === 'none')
     badge = ' ';
 
@@ -66,7 +66,7 @@ function renderlicenseTableOfContents(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
-  const markdownDisplay = `${renderLicenseBadge(data.license)}\n\n# ${data.title}\n\n## Description\n\n${data.description}
+  const markdownDisplay = `${renderLicenseBadge(data.license)}git# ${data.title}\n\n## Description\n\n${data.description}
     \n\n## Table of Contents\n
     \n[Description](#description)
     \n[Installation](#installation)
