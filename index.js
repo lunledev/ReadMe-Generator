@@ -69,28 +69,13 @@ const questions = [
 
 
 ];
-//    const temp = inquirer.createPromptModule();
-//const temp = inquirer.prompt(questions).then((answer) =>{}
-//   temp(questions).then((answers) =>{
-
-//  const filename =`${answers.title.toLowerCase().split(' ').join('')}.md`;
-//    writeToFile(filename, answers);
-//});
-
-
-
-
-
-
 
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 
 
-    //fs.appendFile(fileName, JSON.stringify(data,null,'\n'),(err) =>
-    // fs.appendFile(fileName, generateMarkdown(data),(err) =>
-   // fs.appendFile(fileName, generateMarkdown(data), (err) =>
+
     fs.writeFile(fileName, generateMarkdown(data), (err) =>
         err ? console.error(err) : console.log("readme generated!"));
 
@@ -102,8 +87,9 @@ function init() {
 
     console.log('Welcome to Professional README Generator');
 
-    const temp = inquirer.createPromptModule();
     //const temp = inquirer.prompt(questions).then((answer) =>{}
+    const temp = inquirer.createPromptModule();
+   
     temp(questions).then((answers) => {
 
         const filename = `${answers.title.toLowerCase().split(' ').join('')}.md`;
