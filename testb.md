@@ -1,6 +1,4 @@
- 
-
-# testb
+ # testb
 
 ## Description
 
@@ -45,5 +43,5 @@ test
 
 [My GitHub Profile](https://github.com/test)
     
-reach me with additional questions: tes@gmail.com
+reach me with additional questions: test@gmail.com
     
