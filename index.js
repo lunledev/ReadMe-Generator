@@ -90,7 +90,8 @@ function writeToFile(fileName, data) {
 
     //fs.appendFile(fileName, JSON.stringify(data,null,'\n'),(err) =>
     // fs.appendFile(fileName, generateMarkdown(data),(err) =>
-    fs.appendFile(fileName, generateMarkdown(data), (err) =>
+   // fs.appendFile(fileName, generateMarkdown(data), (err) =>
+    fs.writeFile(fileName, generateMarkdown(data), (err) =>
         err ? console.error(err) : console.log("readme generated!"));
 
 
