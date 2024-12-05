@@ -111,7 +111,7 @@ const markdownDisplay = title +'\n\n'+ descriptionTitle+'\n\n'+Description;
     \n[Tests](#tests)
     \n[Questions](#questions)
     \n\n## Installation\n\n${data.installation_instructions}\n\n## Usage\n\n${data.usage_information}
-    \n\n## Contributing\n\n${data.contribution_guidelines}${renderLicenseSection(data.license)}
+    \n\n## Contributing\n\n${data.contribution_guidelines}\n${renderLicenseSection(data.license)}
     \n\n## Tests\n\n${data.test_instructions}\n\n## Questions\n\n[My GitHub Profile](https://github.com/${data.github_username})
     \nreach me with additional questions: ${data.email}
     
@@ -119,10 +119,16 @@ const markdownDisplay = title +'\n\n'+ descriptionTitle+'\n\n'+Description;
     
     `;
 
-  if (data !== null && data.length > 0)
+  //if (data !== null && data.length > 0)
     return `${markdownDisplay}`;
-  else
-    return markdownDisplay;
+ //else
+    //return markdownDisplay;
+
+    //if (data !== null)
+      //return `${markdownDisplay}\n\n`;
+    //else
+     // return markdownDisplay;
+
 
 }
 
